@@ -1,0 +1,23 @@
+// action script button untuk pindah frame
+on (release) {
+	gotoAndPlay (18); 
+}
+
+// action script untuk menghapus puzzle ke frame lainnya
+stop();
+removeMovieClip(satu);
+removeMovieClip(dua);
+removeMovieClip(tiga);
+removeMovieClip(empat);
+removeMovieClip(lima);
+removeMovieClip(enam);
+removeMovieClip(tujuh);
+removeMovieClip(delapan);
+removeMovieClip(sembilan);
+removeMovieClip(sepuluh);
+removeMovieClip(sebelas);
+removeMovieClip(duabelas);
+removeMovieClip(tigabelas);
+removeMovieClip(empatbelas);
+removeMovieClip(limabelas);
+removeMovieClip(sampah);

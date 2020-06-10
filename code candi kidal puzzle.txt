@@ -1,0 +1,663 @@
+stop();
+score=0;
+for (i = 1; i<=25; i++) {
+	set("kontrol" + i, true);
+}
+
+//membuat variable xawal dengan nilai koordinat x movie clip lingkaran //pertama kali
+xawal = satu._x;
+//membuat variable yawal dengan nilai koordinat y movie clip lingkaran //pertama kali
+yawal = satu._y;
+//ketika movie clip lingkaran ditekan
+satu.onPress = function() {
+	//movie clip ini dapat didrag
+	this.startDrag();
+	//movie clip ini berada di posisi paling atas
+	this.swapDepths(1);
+};
+//ketika tekanan pada movie clip lingkaran dilepaskan
+satu.onRelease = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+//jika posisi movie clip lingkaran berada di sekitar movie clip lingkaran_target
+	if (eval(this._droptarget) == target1) {
+		//posisi x movie clip ini sama dengan posisi x movie clip lingkaran_target
+		this._x = _root.target1._x;
+//posisi y movie clip ini sama dengan posisi y movie clip lingkaran_target
+		this._y = _root.target1._y;
+		score +=25;
+		
+	if (kontrol1) {
+		
+		kontrol1 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}
+	}
+	
+
+	//jika tidak
+	} else {
+		//posisi x movie clip ini sama dengan nilai variable xawal
+		this._x = xawal;
+		//posisi y movie clip ini sama dengan nilai variable yawal
+		this._y = yawal;
+	}
+};
+//ketika tekanan pada movie clip dilepaskan dan kursor mouse tidak berada //di movie clip lingkaran
+//membuat variable xawal dengan nilai koordinat x movie clip lingkaran //pertama kali
+xawal = dua._x;
+//membuat variable yawal dengan nilai koordinat y movie clip lingkaran //pertama kali
+yawal = dua._y;
+//ketika movie clip lingkaran ditekan
+dua.onPress = function() {
+	//movie clip ini dapat didrag
+	this.startDrag();
+	//movie clip ini berada di posisi paling atas
+	this.swapDepths(1);
+};
+//ketika tekanan pada movie clip lingkaran dilepaskan
+dua.onRelease = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+//jika posisi movie clip lingkaran berada di sekitar movie clip lingkaran_target
+	if (eval(this._droptarget) == target2) {
+		//posisi x movie clip ini sama dengan posisi x movie clip lingkaran_target
+		this._x = _root.target2._x;
+//posisi y movie clip ini sama dengan posisi y movie clip lingkaran_target
+		this._y = _root.target2._y;
+		score +=25;
+		if (kontrol2) {
+		
+		kontrol2 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		} }
+	//jika tidak
+	} else {
+		//posisi x movie clip ini sama dengan nilai variable xawal
+		this._x = xawal;
+		//posisi y movie clip ini sama dengan nilai variable yawal
+		this._y = yawal;
+	}
+};
+//ketika tekanan pada movie clip dilepaskan dan kursor mouse tidak berada //di movie clip lingkaran
+dua.onReleaseOutside = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+	//posisi x movie clip ini sama dengan nilai variable xawal
+	this._x = xawal;
+	//posisi y movie clip ini sama dengan nilai variable yawal
+	this._y = yawal;
+};
+
+
+//membuat variable xawal dengan nilai koordinat x movie clip lingkaran //pertama kali
+xawal = tiga._x;
+//membuat variable yawal dengan nilai koordinat y movie clip lingkaran //pertama kali
+yawal = tiga._y;
+//ketika movie clip lingkaran ditekan
+tiga.onPress = function() {
+	//movie clip ini dapat didrag
+	this.startDrag();
+	//movie clip ini berada di posisi paling atas
+	this.swapDepths(1);
+};
+//ketika tekanan pada movie clip lingkaran dilepaskan
+tiga.onRelease = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+//jika posisi movie clip lingkaran berada di sekitar movie clip lingkaran_target
+	if (eval(this._droptarget) == target3) {
+		//posisi x movie clip ini sama dengan posisi x movie clip lingkaran_target
+		this._x = _root.target3._x;
+//posisi y movie clip ini sama dengan posisi y movie clip lingkaran_target
+		this._y = _root.target3._y;
+		score +=25;
+		if (kontrol3) {
+		
+		kontrol3 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	//jika tidak
+	} else {
+		//posisi x movie clip ini sama dengan nilai variable xawal
+		this._x = xawal;
+		//posisi y movie clip ini sama dengan nilai variable yawal
+		this._y = yawal;
+	}
+};
+//ketika tekanan pada movie clip dilepaskan dan kursor mouse tidak berada //di movie clip lingkaran
+tiga.onReleaseOutside = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+	//posisi x movie clip ini sama dengan nilai variable xawal
+	this._x = xawal;
+	//posisi y movie clip ini sama dengan nilai variable yawal
+	this._y = yawal;
+};
+
+
+//membuat variable xawal dengan nilai koordinat x movie clip lingkaran //pertama kali
+xawal = empat._x;
+//membuat variable yawal dengan nilai koordinat y movie clip lingkaran //pertama kali
+yawal = empat._y;
+//ketika movie clip lingkaran ditekan
+empat.onPress = function() {
+	//movie clip ini dapat didrag
+	this.startDrag();
+	//movie clip ini berada di posisi paling atas
+	this.swapDepths(1);
+};
+//ketika tekanan pada movie clip lingkaran dilepaskan
+empat.onRelease = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+//jika posisi movie clip lingkaran berada di sekitar movie clip lingkaran_target
+	if (eval(this._droptarget) == target4) {
+		//posisi x movie clip ini sama dengan posisi x movie clip lingkaran_target
+		this._x = _root.target4._x;
+//posisi y movie clip ini sama dengan posisi y movie clip lingkaran_target
+		this._y = _root.target4._y;
+		score +=25;
+		if (kontrol4) {
+		
+		kontrol4 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	//jika tidak
+	} else {
+		//posisi x movie clip ini sama dengan nilai variable xawal
+		this._x = xawal;
+		//posisi y movie clip ini sama dengan nilai variable yawal
+		this._y = yawal;
+	}
+};
+//ketika tekanan pada movie clip dilepaskan dan kursor mouse tidak berada 
+//di movie clip lingkaran
+empat.onReleaseOutside = function() {
+	//movie clip ini tidak dapat didrag
+	this.stopDrag();
+	//posisi x movie clip ini sama dengan nilai variable xawal
+	this._x = xawal;
+	//posisi y movie clip ini sama dengan nilai variable yawal
+	this._y = yawal;
+};
+
+
+//-----------------------------
+
+xawal = lima._x;
+yawal = lima._y;
+
+lima.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+lima.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target5) {
+	
+		this._x = _root.target5._x;
+
+		this._y = _root.target5._y;
+		score +=25;
+		if (kontrol5) {
+			kontrol5 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+lima.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+
+xawal = enam._x;
+yawal = enam._y;
+
+enam.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+enam.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target6) {
+	
+		this._x = _root.target6._x;
+
+		this._y = _root.target6._y;
+		score +=25;
+		if (kontrol6) {
+			kontrol6 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+enam.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+
+xawal = tujuh._x;
+yawal = tujuh._y;
+
+tujuh.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+tujuh.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target7) {
+	
+		this._x = _root.target7._x;
+
+		this._y = _root.target7._y;
+		score +=25;
+		if (kontrol7) {
+			kontrol7 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+tujuh.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+
+xawal = delapan._x;
+yawal = delapan._y;
+
+delapan.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+delapan.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target8) {
+	
+		this._x = _root.target8._x;
+
+		this._y = _root.target8._y;
+		score +=25;
+		if (kontrol8) {
+			kontrol8 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+delapan.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+
+xawal = sembilan._x;
+yawal = sembilan._y;
+
+sembilan.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+sembilan.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target9) {
+	
+		this._x = _root.target9._x;
+
+		this._y = _root.target9._y;
+		score +=25;
+		if (kontrol9) {
+			kontrol9 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+sembilan.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+
+//-----------------------------
+
+xawal = sepuluh._x;
+yawal = sepuluh._y;
+
+sepuluh.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+sepuluh.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target10) {
+	
+		this._x = _root.target10._x;
+
+		this._y = _root.target10._y;
+		score +=25;
+		if (kontrol10) {
+			kontrol10 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+sepuluh.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+//-----------------------------
+
+xawal = sebelas._x;
+yawal = sebelas._y;
+
+sebelas.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+sebelas.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target11) {
+	
+		this._x = _root.target11._x;
+
+		this._y = _root.target11._y;
+		score +=25;
+		if (kontrol11) {
+			kontrol11 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+sebelas.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+//-----------------------------
+
+xawal = duabelas._x;
+yawal = duabelas._y;
+
+duabelas.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+duabelas.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target12) {
+	
+		this._x = _root.target12._x;
+
+		this._y = _root.target12._y;
+		score +=25;
+		if (kontrol12) {
+			kontrol12 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+duabelas.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+//-----------------------------
+
+xawal = tigabelas._x;
+yawal = tigabelas._y;
+
+tigabelas.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+tigabelas.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target13) {
+	
+		this._x = _root.target13._x;
+
+		this._y = _root.target13._y;
+		score +=25;
+		if (kontrol13) {
+			kontrol13 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+tigabelas.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+//-----------------------------
+
+xawal = empatbelas._x;
+yawal = empatbelas._y;
+
+empatbelas.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+empatbelas.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target14) {
+	
+		this._x = _root.target14._x;
+
+		this._y = _root.target14._y;
+		score +=25;
+		if (kontrol14) {
+			kontrol14 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+empatbelas.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+
+
+xawal = limabelas._x;
+yawal = limabelas._y;
+
+limabelas.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+limabelas.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target15) {
+	
+		this._x = _root.target15._x;
+
+		this._y = _root.target15._y;
+		score +=25;
+		if (kontrol15) {
+			kontrol15 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+limabelas.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+
+//-----------------------------
+xawal = sampah._x;
+yawal = sampah._y;
+
+sampah.onPress = function() {
+
+	this.startDrag();
+
+	this.swapDepths(1);
+};
+
+sampah.onRelease = function() {
+	this.stopDrag();
+	if (eval(this._droptarget) == target25) {
+	
+		this._x = _root.target25._x;
+
+		this._y = _root.target25._y;
+		score +=25;
+		if (kontrol25) {
+			kontrol25 = false;
+		if (score == 375) {
+			gotoAndPlay("menang");
+		}}
+	} else {
+		this._x = xawal;
+		this._y = yawal;
+	}
+};
+
+sampah.onReleaseOutside = function() {
+	
+	this.stopDrag();
+	
+	this._x = xawal;
+	this._y = yawal;
+};
+//Aing Lee Cakar Media production. cakarmediablogspot.com//

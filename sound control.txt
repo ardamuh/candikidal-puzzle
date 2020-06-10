@@ -1,0 +1,40 @@
+//membuat new sound lagu
+lagu = new Sound();
+//memasukkan suara berlinkage suaraku ke dalam variable lagu
+lagu.attachSound("suaraku");
+//mainkan suara di dalam variable lagu sebanyak 999 kali
+lagu.start(0, 999);
+//ketika movie clip slider ditekan
+slider.onPress = function() {
+	//membuat variable kanan dengan nilai koordinat x movie clip garis yang ditambah 200
+	kanan = _root.garis._x+298;
+	//membuat variable kiri dengan nilai koordinat x movie clip garis
+	kiri = _root.garis._x;
+	//membuat variable atas dengan nilai koordinat y movie clip garis
+	atas = _root.garis._y;
+	//membuat variable bawah dengan nilai koordinat y movie clip garis
+	bawah = _root.garis._y;
+	//movieclip ini bergerak mengikuti gerakan mouse dengan titik pusat movieclip ini sebagai titik pusat gerakan
+	//batas gerakan kiri moviclip ini adalah nilai dari variable kiri
+	//batas gerakan atas moviclip ini adalah nilai dari variable atas
+	//batas gerakan kanan moviclip ini adalah nilai dari variable kanan
+	//batas gerakan bawah moviclip ini adalah nilai dari variable bawah
+	startDrag(this, true, kiri, atas, kanan, bawah);
+};
+//ketika movie clip slider digerakkan
+slider.onMouseMove = function() {
+	//membuat new object myPoint
+	myPoint = new Object();
+	//nilai x mypoint sama dengan koordinat x movie clip ini
+	myPoint.x = this._x;
+	//nilai y mypoint sama dengan koordinat y movie clip ini
+	myPoint.y = this._y;
+	_root.garis.globalToLocal(myPoint);
+	//nilai volume suara dalam variable lagu sama dengan nilai x mypoint
+	_root.lagu.setVolume(myPoint.x);
+};
+//ketika tekanan pada movie clip slider dilepaskan ketika mouse bearda di atasnya ataupun tidak
+slider.onRelease = slider.onReleaseOutside=function () {
+	//movie clip ini tidak dapat didrag
+	stopDrag();
+};
