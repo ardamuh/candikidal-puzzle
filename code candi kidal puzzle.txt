@@ -660,4 +660,3 @@ sampah.onReleaseOutside = function() {
 	this._x = xawal;
 	this._y = yawal;
 };
-//Aing Lee Cakar Media production. cakarmediablogspot.com//
